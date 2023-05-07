@@ -29,7 +29,7 @@ const CreatePost = () => {
     if (Form.prompt){
       try {
         setGeneratingImg(true) ;
-        const response = await fetch('http://localhost:8080/api/v1/dalle' , {
+        const response = await fetch('https://imageai-vxms.onrender.com/api/v1/dalle' , {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ const CreatePost = () => {
     if (Form.prompt && Form.photo){
       setLoading(true) ;
       try {
-        const respose = await fetch("http://localhost:8080/api/v1/post" , {
+        const respose = await fetch("https://imageai-vxms.onrender.com/api/v1/post" , {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
